@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Voltage Analysis</title>
+</head>
+<body>
+    <h1>Voltage Over Time</h1>
+    <img src="data:image/png;base64,{{ plot_url }}" />
+
+    <h2>Top 5 Peaks</h2>
+    {{ peak_html|safe }}
+
+    <h2>Top 5 Valleys</h2>
+    {{ valley_html|safe }}
+
+    <h2>Instances where Voltage < 20</h2>
+    {{ low_html|safe }}
+
+    <h2>Timestamps where Downward Slope Accelerates</h2>
+    {{ accel_html|safe }}
+</body>
+</html>
